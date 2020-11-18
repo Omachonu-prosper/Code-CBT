@@ -4,13 +4,26 @@
     "questions": [
         {
             "id": "js1",
-            "question": "what does XHR stand for",
+            "source": "code CBT",
+            "question": "What does XHR stand for",
             "answer": "XML Http Request",
             "options": [
                 "Xtensive Http Response",
                 "Xtensive Http Request",
                 "XML Http Request",
                 "XML Http  Response"
+            ]
+        },
+        {
+            "id": "js2",
+            "source": "code CBT",
+            "question": "Event delegation is ________",
+            "answer": "Falling down to children elements from their parents in the DOM tree",
+            "options": [
+                "Falling down to children elements from their parents in the DOM tree",
+                "Moving from children up to their parent in the DOM",
+                "adding an event listener to a selected element",
+                "Waiting for a DOM event to be triggered"
             ]
         }
     ]
