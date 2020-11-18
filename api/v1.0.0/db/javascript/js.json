@@ -1,0 +1,17 @@
+{
+    "category": "JavaScript",
+    "category-initial": "js",
+    "questions": [
+        {
+            "id": "js1",
+            "question": "what does XHR stand for",
+            "answer": "XML Http Request",
+            "options": [
+                "Xtensive Http Response",
+                "Xtensive Http Request",
+                "XML Http Request",
+                "XML Http  Response"
+            ]
+        }
+    ]
+}
