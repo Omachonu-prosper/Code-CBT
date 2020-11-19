@@ -1,6 +1,6 @@
 {
     "category": "JavaScript",
-    "category-initial": "js",
+    "category_initial": "js",
     "questions": [
         {
             "id": "js1",
@@ -24,6 +24,42 @@
                 "Moving from children up to their parent in the DOM",
                 "adding an event listener to a selected element",
                 "Waiting for a DOM event to be triggered"
+            ]
+        },
+        {
+            "id": "js3",
+            "source": "code CBT",
+            "question": "The constructor new Number() is a type of",
+            "answer": "Object",
+            "options": [
+                "Object",
+                "Number",
+                "String",
+                "Constructor numeric"
+            ]
+        },
+        {
+            "id": "js4",
+            "source": "code CBT",
+            "question": "All of the following are ways to handle asyncronous calls in JavaScript except using",
+            "answer": "Reusables",
+            "options": [
+                "Callback functions",
+                "Async await",
+                "Promises",
+                "Reusables"
+            ]
+        },
+        {
+            "id": "js5",
+            "source": "code CBT",
+            "question": "Which is a characteristic of var when defining a variable",
+            "answer": "var is visible to all nested scopes in its definined scope",
+            "options": [
+                "var is visible in its defined scope only",
+                "var can not be instantiated",
+                "var is visible to all nested scopes in its definined scope",
+                "var works only when defined in block level scopes"
             ]
         }
     ]
