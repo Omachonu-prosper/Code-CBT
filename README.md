@@ -65,5 +65,5 @@ If you are downloading the json files you are free to add, update or delete any 
 >On our servers
 You can make a pull request with a commit message stating the file you editted and the question id added on to from the last id in the right structure. For example if the last id in the js.json file was js43 then if i am to add a question the new questions id should be js44.
 
-> NOTE: Any alterance to any other part of the repo without due information on why and where the change will not be honoured (ie your pull request will not be merged but deleted).
+> NOTE: Any alterance to any other part of the repo without due information on why and where the change will not be honoured (ie your pull request will not be merged but deleted). Thanks for understanding.
 
