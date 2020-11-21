@@ -1,4 +1,7 @@
 # Code CBT
+The one stop code questions api.
+
+## About
 Code CBT is a frontend api where you can get code related questions you can use for practise, job interview tests (can be used by employers or potential employees) or by code instructors to teach their students how to make api calls or to test their knowledge on what they have learnt.
 
 ## Getting started
