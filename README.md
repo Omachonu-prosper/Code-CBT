@@ -52,6 +52,12 @@ You can contribute to the project by starring, cloning or downloading the reposi
 ### Feedback 
 Let me know what you think about this software i'm open minded to any suggestion, criticism, bug report, bug fix or any thing on your mind.
 
+> facebook: [Omachonu Codes](https://web.facebook.com/search/top/?q=omachonu%20codes&opensearch=1&_rdc=1&_rdr)
+
+> :email: Email: [OmachonuCodes Gmail](https://OmachonuCodes@gmail.com)
+
+> :hash: Twitter: [@OmachonuProsper](https://twitter.com/OmachonuProsper)
+
 ### Adding your new question 
 > locally 
 If you are downloading the json files you are free to add, update or delete any question. You have the liberty to set the questions as you like but you must make reference to Code CBT.
