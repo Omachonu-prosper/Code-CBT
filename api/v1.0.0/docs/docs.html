@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code CBT</title>
+    <title>Code CBT | Doccumentation</title>
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="../../../assets/img/logo-favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/img/logo-favicon.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="../../../assets/css/all.min.css">
-    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg background-primary navbar-dark">
         <a class="navbar-brand" href="#">
-            <img src="../../../assets/img/logo-white.PNG" alt="logo" class="nav-logo">
+            &LeftAngleBracket; Code CBT / &RightAngleBracket;
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -23,44 +23,50 @@
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="../../../index.html">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
             </li>
 
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Docs
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item active" href="#"> Making Requests </a>
+                  <a class="dropdown-item" href="#getting-started"> Getting Started </a>
+                  <a class="dropdown-item" href="#making-requests"> Making Requests </a>
                   <a class="dropdown-item" href="#"> Download </a>
                 </div>
             </li>
 
-            <li class="nav-item dropdown active">
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   V1.0.0
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#"> v1.0.0 </a>
-                  <!-- <a class="dropdown-item" href="#">Another action</a> -->
+                  <a class="dropdown-item active" href="#"> v1.0.0 </a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Current v1.0.0</a>
+                  <a class="dropdown-item active" href="#">Current v1.0.0</a>
                 </div>
             </li>  
 
-            <li class="nav-item dropdown active">
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Developer
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#"> Github </a>
-                  <a class="dropdown-item" href="#">Download</a>
-                  <a class="dropdown-item" href="#">Contribute</a>
+                  <a class="dropdown-item" href="https://github.com/Omachonu-prosper/Code-CBT">
+                     Github 
+                  </a>
+                  <a class="dropdown-item" href="./download.html">
+                    Download
+                  </a>
+                  <a class="dropdown-item" href="./contribute.html">
+                    Contribute
+                  </a>
                 </div>
             </li>
 
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#">Demo </a>
             </li>
 
@@ -69,19 +75,99 @@
         </div>
     </nav>
 
+    <!-- main content  -->
+    <div class="main my-5">
+      <div class="container">
+        <h1 class="display-sl">The Official Docs for Code CBT</h1>
+        <p class="lead text-center pt-3">
+          You've Known what Code CBT is ( if not <a href="/index.html">click here</a> ) now it's time to get your hands dirty and try it out for yourself.
+        </p>
+
+        <!-- getting started  -->
+        <div class="my-5 pt-3">
+          <a id="getting-started"></a>
+          <h2>Getting Started</h2>
+          <p>
+            You can use the Code CBT API either by making <a href="#making-requests">Http requests</a> or <a href="#">downloading</a> the json files and hosting it yourself.
+          </p>
+        </div>
+
+        <!-- Making requests  -->
+        <a id="making-requests"></a>
+        <div class="my-5 py-3">
+          <h2>Making Http GET requests</h2>
+          <p>
+            Using Code CBT through http requests requires you to make HTTP GET requests to our hosted server.
+            <br>
+            <h4>For Example</h4>
+            
+            <figure>
+              <code class="mt-4 block">
+                Request template
+
+                <div class="code">
+                  <code class="no-break">
+                    http://127.0.0.1:5500/api/-version-/db/-category-/-category-initials-.json
+                  </code>
+                </div>
+              </code>
+
+              <code class="mt-4 block">
+                Request
+
+                <div class="code">
+                  <code class="no-break">
+                    http://127.0.0.1:5500/api/v1.0.0/db/javascript/js.json
+                  </code>
+                </div>
+              </code>
+
+              <code class="mt-4 block">
+                Response
+
+                <div class="code" style="height: 15rem;">
+                  <code class="no-break">
+                    {
+                      <div class="pl-1">"category": "JavaScript", </div>
+                      <div class="pl-1">"category_initial": "js", </div>
+                      <div class="pl-1">"questions": [ </div>
+                      <div class="pl-2"> { </div>
+                      <div class="pl-3"> "id": "js1", </div>
+                      <div class="pl-3"> "source": "code CBT", </div>
+                      <div class="pl-3"> "question": "What does XHR stand for", </div>
+                      <div class="pl-3">"answer": "XML Http Request", </div>
+                      <div class="pl-3">"options": [ </div>
+                      <div class="pl-4">"Xtensive Http Response", </div>
+                      <div class="pl-4">"Xtensive Http Request", </div>
+                      <div class="pl-4">"XML Http Request", </div>
+                      <div class="pl-4">"XML Http  Response" </div>
+                      <div class="pl-3"> ] </div>
+                      <div class="pl-2"> } </div>
+                      <div class="pl-1"> ] </div>
+                    }
+                  </code>
+                </div>
+              </code>
+            </figure>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
     <!-- footer -->
     <footer>
         <div class="footer-box p-3">
-            <img src="../../../assets/img/logo-green.png" alt="logo" class="footer-logo mx-auto my-3">
+            <img src="/assets/img/logo-green.png" alt="logo" class="footer-logo mx-auto my-3">
 
             <p class="text-muted">Built with love by Omachonu Prosper &copy; 2020 OMC</p>
         </div>
     </footer>
 
-    <script src="../../../assets/js/jquery.min.js"></script>
-    <script src="../../../assets/js/bootstrap.bundle.js"></script>
-    <script src="../../../assets/js/bootstrap.min.js"></script>
-    <script src="../../../assets/js/fixes.js"></script>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/fixes.js"></script>
 
 </body>
 </html>
