@@ -114,6 +114,18 @@
                   </code>
                 </div>
               </code>
+              <p class="pt-3"> 
+                Where -version-, -category- and -categoty-initials- are all place holders 
+              </p>
+
+              <div class="mssg mssg-warn my-5">
+                <div class="mssg-icon">
+                    <i class="fa fa-bell"></i>
+                </div>
+                <div class="mssg-content">
+                    A list of all categories and categoriy initials can be found <a href="#available-categories">here</a>
+                </div>
+              </div>  
 
               <code class="mt-4 block">
                 Request
@@ -155,13 +167,59 @@
           </p>
         </div>
 
+        <!-- available categories  -->
+        <div class="mb-5 mt-3">
+          <a id="available-categories"></a>
+          <h2>Available Categories and their file initials</h2>
+          <p>
+            Using Code CBT's api through our hosted servers <a href="#making-requests">(as seen above)</a>, requires you to make http GET requests to certain folders and files the server. The list of the available categories and files is listed bellow.
+          </p>
+
+          <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Category</th>
+                <th scope="col">Files Names</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>javascript</td>
+                <td>js.json</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>version_control</td>
+                <td>git.json, github.json</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>web_dev</td>
+                <td>web.json</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="mssg mssg-warn my-5">
+            <div class="mssg-icon">
+                <i class="fa fa-bell"></i>
+            </div>
+            <div class="mssg-content">
+                If you are downloading Code CBT files as one then you can find details on locating files and folders here <a href="./download.html">here</a>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </div>
 
     <!-- footer -->
     <footer>
         <div class="footer-box p-3">
-            <img src="/assets/img/logo-green.png" alt="logo" class="footer-logo mx-auto my-3">
+            <a href="#" class="logo-green">&LeftAngleBracket; Code CBT / &RightAngleBracket;</a>
 
             <p class="text-muted">Built with love by Omachonu Prosper &copy; 2020 OMC</p>
         </div>
