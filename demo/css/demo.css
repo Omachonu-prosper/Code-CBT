@@ -1,0 +1,66 @@
+.list-group-item.active {
+    background-color: #2ea44f;
+    border-color: var(--primary);
+}
+
+.list-group-item {
+    padding: .5rem;
+}
+
+.holder {
+    min-height: 90vh;
+}
+
+
+.pass {
+    color: var(--success)
+}
+.fail {
+    color: var(--danger)
+}
+
+.play-list {
+    max-width: 30rem;
+}
+
+/* loaders  */
+.loader {
+    display: list-item;
+    margin: 4rem auto;
+    width: 4rem;
+    height: 4rem;
+    border-top: solid 3px var(--success);
+    border-right: solid 3px var(--success);
+    border-radius: 50%;
+    animation-name: loader;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(30deg);
+    }
+    20% {
+        transform: rotate(60deg);
+    }
+    40% {
+        transform: rotate(120deg);
+    }
+    60% {
+        transform: rotate(180deg);
+    }
+    80% {
+        transform: rotate(240deg);
+    }
+    90% {
+        transform: rotate(300deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

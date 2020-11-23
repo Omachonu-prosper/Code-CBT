@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code CBT | Doccumentation</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/assets/img/logo-favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="./css/demo.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg background-primary navbar-dark">
+        <a class="navbar-brand mx-auto" href="#">
+            &LeftAngleBracket; Code CBT / &RightAngleBracket; Demo <i class="fa fa-laptop-code"></i>
+        </a>
+
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/index.html"> &leftleftarrows; CodeCBT</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="holder my-5 container">
+        <section class="tab-bar mx-auto text-center">
+            <div class="list-group list-group-horizontal">
+                <a href="#tab=home" data-tab="home" class="list-group-item list-group-item-action active" id="home">
+                    <i class="fa fa-home" data-tab="home"></i>
+                </a>
+
+                <a href="#tab=play" data-tab="play" class="list-group-item list-group-item-action" id="play">
+                    <i class="fa fa-gamepad" data-tab="play"></i>
+                </a>
+
+                <a href="#tab=settings" data-tab="settings" class="list-group-item list-group-item-action" id="settings">
+                    <i class="fa fa-wrench" data-tab="settings"></i>
+                </a>
+              </div>
+        </section>
+
+        <section class="main-content my-5">
+            <!-- contents come from the DOM -->
+        </section>
+        
+    </div>
+    
+    <!-- footer -->
+    <footer>
+        <div class="footer-box p-3">
+            <a href="#" class="logo-green">&LeftAngleBracket; Code CBT / &RightAngleBracket; Demo</a>
+
+            <p class="text-muted">Built with love by Omachonu Prosper &copy; 2020 OMC</p>
+        </div>
+    </footer>
+
+    <script src="./src/states.js"></script>
+    <script src="./src/app.js"></script>
+
+</body>
+</html>
