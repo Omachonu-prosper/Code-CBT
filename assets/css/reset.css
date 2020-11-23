@@ -1,0 +1,160 @@
+/* reset color-primary btn-primary to a custom green color */
+:root {
+    --primary: #0a920a;
+}
+
+.color-primary {
+    color: var(--primary);
+}
+
+.btn-primary {
+    color: var(--primary);
+}
+
+.background-primary {
+    background-color: var(--primary);
+}
+
+/* the logo for the navbar  */
+.nav-logo {
+    width: 7rem;
+    height: 2.5rem;
+}
+
+/* dropdown items  */
+.dropdown-item.active,
+.dropdown-item:active {
+    color: var(--primary);
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+
+.dropdown-item:hover {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    background-color: #ffffff !important;
+    transition: all .5s;
+}
+
+.display-sl {
+    font-weight: 300;
+    text-align: center;
+    font-size: 2.8rem;
+    word-break: break-word;
+    -ms-word-break: break-word;
+    -webkit-word-break: break-word;
+}
+
+.display-lg {
+    font-weight: 600;
+    font-size: 3rem;
+    letter-spacing: 7px;
+    word-break: break-word;
+    -ms-word-break: break-word;
+    -webkit-word-break: break-word;
+}
+
+.container {
+    max-width: 50rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* make display block  */
+.block {
+    display: block;
+}
+
+/* make display inline block  */
+.inline-block {
+    display: inline-block;
+}
+
+/* makes an element not to break but to stay on one line  */
+.no-break {
+    width: max-content;
+    display: block;
+    padding-right: 1rem;
+}
+
+.code {
+    padding: 1rem;
+    overflow-x: auto;
+    display: block;
+    background-color: #f5f7f9;
+    margin-top: .5rem;
+    border-radius: 10px;
+}
+
+/* messagees  */
+.mssg {  
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mssg-icon {
+    font-size: 1.5rem;
+}
+
+.mssg-content {
+    width: 85%;
+}
+
+.mssg-danger {
+    color: var(--red);
+    border-left: solid 3px var(--danger);
+}
+
+.mssg-warn {
+    border-left: solid 3px var(--warning);
+}
+
+/* media query to make message responsive */
+@media screen and (max-width: 350px) {
+    .mssg {  
+        padding: .5rem;
+    }
+    
+    .mssg-icon {
+        font-size: 1rem;
+    }
+    
+    .mssg-content {
+        font-size: 14px;
+    }
+    
+}
+
+/* footer styles  */
+.footer-box {
+    width: 100%;
+    background-color: #f5f7f9;
+    text-align: center;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.logo-green {
+    color: var(--success);
+    font-size: 1.5rem;
+    margin: 1.4rem;
+    display: inline-block;
+    transition: all .4s;
+}
+
+@media screen and (max-width: 600px) {
+    .footer-box {
+        display: block;
+    }
+}
+
+.logo-green:hover {
+    text-decoration: none;
+    color: var(--success);
+    transform: scale(1.2) rotate(-4deg);
+}
