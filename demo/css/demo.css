@@ -11,7 +11,6 @@
     min-height: 90vh;
 }
 
-
 .pass {
     color: var(--success)
 }
@@ -23,9 +22,13 @@
     max-width: 30rem;
 }
 
+.form-settings {
+    max-width: 30rem;
+}
+
 /* loaders  */
 .loader {
-    display: list-item;
+    display: none;
     margin: 4rem auto;
     width: 4rem;
     height: 4rem;
