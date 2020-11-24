@@ -6,13 +6,24 @@ class StateHandler {
 
     // what happens when the page is loaded 
     onPageLoad() {
-        
-        // redirect to home tab 
-        // set the location to the home state 
-        window.location.hash = '#tab=home';
+        let hash = location.hash;
 
-        // turn the state to the home state and render the right ui
-        state.homeState();
+        console.log(hash)
+
+        // if the user is already on a tab dont redirect to the home tab 
+        if(hash === '#tab=play') {
+            // set the location to the home tab 
+            state.playState();
+        } else if (hash === 'tab=playing') {
+            // set to playing tab
+        } else if (hash === '#tab=settings') {
+            // set to the settings tab 
+            state.settingsState()
+        } else {
+            // set to the home tab
+            state.homeState()
+        }
+
     }
 
     // decide the state to show when a tab is clicked 
@@ -46,6 +57,8 @@ class StateHandler {
 
         // listen for a click on the tab-bar and decidewhich state to show
         document.querySelector('.tab-bar').addEventListener('click', stateHandler.decideState);
+
+        // click on any category on the play state
 
     }
 )()
