@@ -8,8 +8,6 @@ class StateHandler {
     onPageLoad() {
         let hash = location.hash;
 
-        console.log(hash)
-
         // if the user is already on a tab dont redirect to the home tab 
         if(hash === '#tab=play') {
             // set the location to the home tab 
