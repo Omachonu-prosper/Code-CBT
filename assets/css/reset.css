@@ -12,6 +12,11 @@
     border-color: var(--primary);
 }
 
+.btn-primary:hover {
+    background-color: var(--success);
+    border-color: var(--success);
+}
+
 .background-primary {
     background-color: var(--primary);
 }
