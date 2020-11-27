@@ -13,9 +13,11 @@
 }
 
 .btn-primary:hover, 
-.btn-primary:focus {
+.btn-primary:focus,
+.btn-primary:active {
     background-color: var(--success);
     border-color: var(--success);
+    outline: none !important;
 }
 
 .background-primary {
