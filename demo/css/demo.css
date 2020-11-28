@@ -22,7 +22,29 @@
     max-width: 30rem;
 }
 
+.full-screen {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    text-align: center;
+    overflow: auto;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.result-board {
+    display: none;
+}
+
 .form-settings {
+    max-width: 30rem;
+}
+.question-box {
     max-width: 30rem;
 }
 
