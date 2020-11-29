@@ -34,6 +34,7 @@ class StateHandler {
     decideState(e) {
         const resultBoard = document.querySelector('.result-board').style.display;
         
+        // if the result board is shown remove it 
         if(resultBoard === 'block') {
             State.removeResult();
         }
@@ -63,7 +64,7 @@ class StateHandler {
             this.gameCategory = e.target.dataset.category;
             this.gameFile = e.target.dataset.file;
 
-            CodeCBT.getAllQuestions(this.gameCategory, this.gameFile)
+            CodeCBT.getRandomQuestions(this.gameCategory, this.gameFile, 4)
                     .then(questions => {
                         // set the questions key to the fetched questions 
                         this.questions = questions;
@@ -130,7 +131,7 @@ class StateHandler {
         // clicking on the submit btn 
         document.querySelector('.main-content').addEventListener('click', StateHandler.submit );
 
-        // listen for a click on the resultboard and decide which state to show
+        // listen for a click on the resultboard's link and decide which state to show
         document.querySelector('.result-board').addEventListener('click', stateHandler.decideState);
 
     }
