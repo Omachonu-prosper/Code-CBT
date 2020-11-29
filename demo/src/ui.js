@@ -201,7 +201,7 @@ class UI {
             </p>
 
             <div class="game-over-links">
-                <a href="#tab=play" data-tab="play" class="btn btn-success my-2 mx-1">Play again</a>
+                <a href="#tab=play" data-tab="play" class="btn btn-success my-2 mx-1">Pick a category</a>
                 
                 <a href="#tab=home" data-tab="home" class="btn btn-success my-2 mx-1">Go home</a> 
 
