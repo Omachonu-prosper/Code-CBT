@@ -61,6 +61,67 @@
                 "var is visible to all nested scopes in its definined scope",
                 "var works only when defined in block level scopes"
             ]
+        },
+        {
+            "id": "js6",
+            "source": "code CBT",
+            "question": "What does the acronym REST stand for",
+            "answer": "Representational State Transfer",
+            "options": [
+                "Representational State Transfer",
+                "Represented State Transfer",
+                "Represent State Transfer",
+                "Representable State Transfer"
+            ]
+        },
+        {
+            "id": "js7",
+            "source": "code CBT",
+            "question": "What does the function newDay return when called if it comes from the code below. let day = 'Tuesday'; function newDay() { day = Wednesday; return day; }",
+            "answer": "A ReferenceError",
+            "options": [
+                "'Wednesday'",
+                "A SyntaxError",
+                "A ReferenceError",
+                "'Tuesday'"
+            ]
+        },
+        {
+            "id": "js8",
+            "source": "code CBT",
+            "question": "A function calling its self like in the example below will return a ______ error notifying you that ______. function recursive() { return recursive() }",
+            "answer": "RangeError, Maximum call stack size exceeded",
+            "options": [
+                "RecursiveError, Recursion to self",
+                "LoopError, Maximum loop stack exceded",
+                "RecursiveError, Maximum call stack size exceeded",
+                "RangeError, Maximum call stack size exceeded"
+            ]
+        },
+        {
+            "id": "js9",
+            "source": "code CBT",
+            "question": "One of the advantages of try and catch is that ______",
+            "answer": "The code that comes after if will still run regardless of the result",
+            "options": [
+                "The code that comes after if will only run if there is no error",
+                "The code that comes after if will still run regardless of the result",
+                "Your code will never crash even if there are other errors outside the try-catch block",
+                "Your call stack can not be exceeded"
+            ]
+        },
+        {
+            "id": "js10",
+            "source": "code CBT",
+            "question": "A function with an asterisk after its function keyword (function* aFunction(){ ... }) is known as a ______",
+            "answer": "generator function",
+            "options": [
+                "Miscellaneous function",
+                "Constructor function",
+                "Generator function",
+                "Asynchronous function"
+            ]
         }
+
     ]
 }
