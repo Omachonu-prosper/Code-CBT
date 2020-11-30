@@ -114,7 +114,7 @@
             "id": "js10",
             "source": "code CBT",
             "question": "A function with an asterisk after its function keyword (function* aFunction(){ ... }) is known as a ______",
-            "answer": "generator function",
+            "answer": "Generator function",
             "options": [
                 "Miscellaneous function",
                 "Constructor function",
