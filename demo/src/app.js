@@ -64,7 +64,7 @@ class StateHandler {
             this.gameCategory = e.target.dataset.category;
             this.gameFile = e.target.dataset.file;
 
-            CodeCBT.getRandomQuestions(this.gameCategory, this.gameFile, 4)
+            CodeCBT.getRandomQuestions(this.gameCategory, this.gameFile, 9)
                     .then(questions => {
                         // set the questions key to the fetched questions 
                         this.questions = questions;
