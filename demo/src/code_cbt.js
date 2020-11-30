@@ -42,6 +42,16 @@ class CodeCBT {
         }).catch( err => console.error(err) )
     }
 
+    static getQuestionById (category, file, questionId) {
+        // subtract one from the id to get the index for that question 
+        const questionIndex = questionId - 1;
+
+        // get the question using the get question by index method
+        return this.getQuestionByIndex(category, file, questionIndex)
+                .then( question => question )
+                .catch( err => console.error(err) );
+    }
+
     static generateRandomIndexes(category, file, limit = 1) {
         return this.getAllQuestions(category, file)
                 .then(questions => {
