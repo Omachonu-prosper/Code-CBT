@@ -1,12 +1,3 @@
-// async function pusher(category, file, arr, index) {
-//     await CodeCBT.getQuestionByIndex(category, file, index)
-//         .then(question => {
-//             arr.push(question);
-//             pusher(category, file, questionsArr, randomNo)
-
-//         })
-// }
-
 class CodeCBT {
 
     // get all data 
@@ -31,7 +22,7 @@ class CodeCBT {
                 // if the index is greater than the no of questions return the first question 
 
                 // let the user know what action was taken 
-                console.warn('the given index is more than the number of questions so the first question was returned: note that the question with index of');
+                console.warn('the given index is more than the number of questions so the first question was returned');
                 
                 // return the first question 
                 return questions[0]
@@ -52,18 +43,18 @@ class CodeCBT {
                 .catch( err => console.error(err) );
     }
 
-    static generateRandomIndexes(category, file, limit = 1) {
+    static generateRandomIndexes(category, file, noOfQuestions = 1) {
         return this.getAllQuestions(category, file)
                 .then(questions => {
                     // instantiate the questions store 
                     const questionsIndexes = [];
 
-                    // if the limit is less than the ammount of questions 
-                    if(limit < questions.length) {
-                        // loop through to generate a random number while the iteration is less than the limit 
-                        for(let i = limit; i > questionsIndexes.length; ) {
+                    // if the noOfQuestions to be returned is less than the ammount of questions in the db
+                    if(noOfQuestions < questions.length) {
+                        // loop through to generate a random number while the iteration is less than the noOfQuestions 
+                        for(let i = noOfQuestions; i > questionsIndexes.length; ) {
                             // generate a random number always less than the length of questions 
-                            const randomNo = Math.floor(Math.random() * questions.length)
+                            const randomNo = Math.floor(Math.random() * questions.length )
     
                             // loop through the questions 
                             questions.forEach(question => {
@@ -77,7 +68,7 @@ class CodeCBT {
                         }
                     } else {
                         // throw an error to the console 
-                        console.error('the limit given is more than the number of questions available')
+                        console.error('the noOfQuestions to be returned is more than the number of questions available')
                     }
 
                     // return the generated indexes 
@@ -89,9 +80,9 @@ class CodeCBT {
                 }).catch( err => console.error(err) )
     }
 
-    static getRandomQuestions(category, file, limit = 1) {
+    static getRandomQuestions(category, file, noOfQuestions) {
         // make the call to get random indexes 
-        return this.generateRandomIndexes(category, file, limit)
+        return this.generateRandomIndexes(category, file, noOfQuestions)
                 .then(res => {
                     // store the generated questions so we can return them 
                     const generatedQuestions = [],
@@ -100,10 +91,12 @@ class CodeCBT {
                         // get the questions returned at the [1] of the response 
                             questions = res[1];
 
+                    // loop through the indexes
                     indexes.forEach(index => {
-                        // push the question at that index (index is a random number which must have an index in the questions so push the question at that index to the generated questions array)
+                        // push the index of the indexes matching the index of the questions to the generated questions array
                         generatedQuestions.push(questions[index]);
-                    })
+                       
+                    }) 
 
                     // return the generatedQuestions 
                     return generatedQuestions;
@@ -111,27 +104,15 @@ class CodeCBT {
                 })
     }
 
-    static getRandomQuestion(category, file, limit = 5) {
+    static getRandomQuestion(category, file, searchLimit = 5) {
         // generate a random id 
-        // dont add 1 to limit because index is 0 based and if we call limit as 5 then we are calling questions[4]
-        let questionIndex = Math.floor(Math.random() * limit );
+        // dont add 1 to searchLimit because index is 0 based and if we call searchLimit as 5 then we are calling questions[4]
+        let questionIndex = Math.floor(Math.random() * searchLimit );
 
-
-        return this.getAllQuestions(category, file).then(questions => {
-        
-            if(questionIndex >= questions.length) {
-                // if the generated random id is greater than the ammount of question return the first question 
-
-                // let the user know what action was taken 
-                console.warn('the given limit is more than the number of questions so the first question was returned');
-                
-                // return the first question 
-                return questions[0]
-
-            } else {
-                return questions[questionIndex]
-            }
-        }).catch( err => console.error(err) )
+        // fetch the question with the index of questionIndex using the getQuestionsByIndex method 
+        return this.getQuestionByIndex(category, file, questionIndex)
+                .then( question => question )
+                .catch( err => console.error(err) )
         
     }
 
