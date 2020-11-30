@@ -102,10 +102,10 @@
             "id": "js9",
             "source": "code CBT",
             "question": "One of the advantages of try and catch is that ______",
-            "answer": "The code that comes after if will still run regardless of the result",
+            "answer": "The code that comes after it will still run regardless of the result",
             "options": [
-                "The code that comes after if will only run if there is no error",
-                "The code that comes after if will still run regardless of the result",
+                "The code that comes after it will only run if there is no error",
+                "The code that comes after it will still run regardless of the result",
                 "Your code will never crash even if there are other errors outside the try-catch block",
                 "Your call stack can not be exceeded"
             ]
