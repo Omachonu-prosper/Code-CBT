@@ -5,7 +5,10 @@ class State {
     // turning page to states
     // home state 
     static homeState() {
-        ui.removeAndSetActiveTab(ui.homeTab, ui.playTab, ui.settingsTab)
+        // go to the top of the page 
+        window.scrollTo(0, 0);
+        
+        ui.removeAndSetActiveTab(ui.homeTab, ui.playTab, ui.settingsTab);
 
         location.hash = '#tab=home';
 
@@ -14,7 +17,10 @@ class State {
 
     // play state 
     static playState() {
-        ui.removeAndSetActiveTab(ui.playTab, ui.homeTab, ui.settingsTab)
+        // go to the top of the page 
+        window.scrollTo(0, 0);
+        
+        ui.removeAndSetActiveTab(ui.playTab, ui.homeTab, ui.settingsTab);
 
         location.hash = '#tab=play';
 
@@ -23,7 +29,10 @@ class State {
 
     // settings state 
     static settingsState() {
-        ui.removeAndSetActiveTab(ui.settingsTab, ui.playTab, ui.homeTab)
+        // go to the top of the page 
+        window.scrollTo(0, 0);
+        
+        ui.removeAndSetActiveTab(ui.settingsTab, ui.playTab, ui.homeTab);
 
         location.hash = '#tab=settings';
 
@@ -32,6 +41,9 @@ class State {
 
     // game in progress 
     static gameInProgress(questions) {
+        // go to the top of the page 
+        window.scrollTo(0, 0);
+        
         location.hash = `#tab=playing`;
 
         ui.showGameState(questions);
