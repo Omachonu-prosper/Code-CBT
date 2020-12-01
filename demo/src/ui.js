@@ -39,7 +39,9 @@ class UI {
         
         let output = '';
         
-        output += `              
+        output += `    
+        <h2 class="text-center mb-3">Dashboard</h2>
+        
         <table class="table">
             <thead class="thead-light">
                 <tr>
@@ -72,9 +74,9 @@ class UI {
 
         output = `
         <div class="my-5 pt-3 box">
-            <h2>Pick a category</h2>
+            <h2 class="text-center mb-3">Pick a category</h2>
 
-            <div class="list-group play-list mx-auto mt-5">
+            <div class="list-group play-list mx-auto">
                 <a href="#tab=playing" class="list-group-item" data-category="javascript" data-file="js.json">
                     JavaScript
                 </a>
@@ -104,11 +106,11 @@ class UI {
         let output = '';
 
         output += `
-        <h2>
+        <h2 class="text-center mb-3">
             Game Settings
         </h2>
         
-        <form class="mt-4 mx-auto form-settings">
+        <form class="mx-auto form-settings">
             <div class="form-row align-items-center">
                 <div class="col-12">
                     <label class="sr-only" for="inlineFormInput">Name</label>
@@ -195,18 +197,20 @@ class UI {
 
         output += `
         <div class="full-screen p-3">
-            <h1 class="remark">${remark}</h1>
+            <div class="center-y">
+                <h1 class="remark">${remark}</h1>
 
-            <p class="mt-5 lead">
-                you scored ${score} out of ${totalQuestions} questions
-            </p>
+                <p class="mt-5 lead">
+                    you scored ${score} out of ${totalQuestions} questions
+                </p>
 
-            <div class="game-over-links">
-                <a href="#tab=play" data-tab="play" class="btn btn-success my-2 mx-1">Pick a category</a>
-                
-                <a href="#tab=home" data-tab="home" class="btn btn-success my-2 mx-1">Go home</a> 
+                <div class="game-over-links">
+                    <a href="#tab=play" data-tab="play" class="btn btn-success my-2 mx-1">Pick a category</a>
+                    
+                    <a href="#tab=home" data-tab="home" class="btn btn-success my-2 mx-1">Go home</a> 
 
-                <a href="#tab=settings" data-tab="settings" class="btn btn-success my-2 mx-1">Go to settings</a>
+                    <a href="#tab=settings" data-tab="settings" class="btn btn-success my-2 mx-1">Go to settings</a>
+                </div>
             </div>
         </div>
         `

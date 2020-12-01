@@ -33,9 +33,6 @@
     overflow: auto;
     backdrop-filter: blur(2px);
     z-index: 100;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
 }
 
 .result-board {
@@ -47,6 +44,13 @@
 }
 .question-box {
     max-width: 30rem;
+}
+
+.center-y {
+    height: 100vh;
+    overflow: auto;
+    padding: 4rem 0 2rem 0;
+    margin: 0 auto;
 }
 
 /* loaders  */
