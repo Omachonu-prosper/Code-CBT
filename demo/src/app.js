@@ -87,38 +87,35 @@ class StateHandler {
     static submit(e) {
         // if what was clicked was the submit button 
         if(e.target.id === 'submit') {
-            State.loading();
+    
+            // loopthrough all the questions 
+            this.questions.forEach(question => {
+                const radioBtns = document.querySelectorAll(`.form-check-input[name=${question.id}]`);
 
-            setTimeout(() => {
-                // loopthrough all the questions 
-                this.questions.forEach(question => {
-                    const radioBtns = document.querySelectorAll(`.form-check-input[name=${question.id}]`);
-
-                    // loop through all radios for a particular question 
-                    radioBtns.forEach(btn => {
-                        // if any option was picked
-                        if(btn.checked) {
-                            const checkedLabelText = btn.nextElementSibling.innerText;
-                        
-                            // check if what is checked === the answer 
-                            // if labelText === question.answer
-                            if(checkedLabelText === question.answer) {
-                                // add one to the score 
-                                this.score += 1;
-                            }
+                // loop through all radios for a particular question 
+                radioBtns.forEach(btn => {
+                    // if any option was picked
+                    if(btn.checked) {
+                        const checkedLabelText = btn.nextElementSibling.innerText;
+                    
+                        // check if what is checked === the answer 
+                        // if labelText === question.answer
+                        if(checkedLabelText === question.answer) {
+                            // add one to the score 
+                            this.score += 1;
                         }
-                    })
+                    }
                 })
+            })
 
-                // run to see if the player passed or not 
-                passOrFail(this.score, this.questions.length);   
-                
-                this.gameInProgress = false;
-                this.gameCategory = null;
-                this.gameFile = null;
-                this.questions = null;
-                this.score = 0;
-            }, 800);
+            // run to see if the player passed or not 
+            passOrFail(this.score, this.questions.length);   
+            
+            this.gameInProgress = false;
+            this.gameCategory = null;
+            this.gameFile = null;
+            this.questions = null;
+            this.score = 0;
         }
     } 
 

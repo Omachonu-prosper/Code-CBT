@@ -213,9 +213,6 @@ class UI {
 
         this.resultBoard.innerHTML = output;
 
-        // remove every thing on the main content 
-        this.mainContent.innerHTML = '';
-
 
         // determine the color to give to the result h1 
         if(result === 'pass') {
