@@ -32,28 +32,31 @@ class StateHandler {
 
     // decide the state to show when a tab is clicked 
     decideState(e) {
-        const resultBoard = document.querySelector('.result-board').style.display;
-        
-        // if the result board is shown remove it 
-        if(resultBoard === 'block') {
-            State.removeResult();
-        }
-
-        // checkif dataset.tab is either home, play or settings 
-        // e.target is either the link or the icon in the tab-bar, it depends on which was clicked 
-        if(e.target.dataset.tab === 'settings') {
-
-            // run the settings State 
-            State.settingsState();
-        } else if(e.target.dataset.tab === 'play') {
-
-
-            // run the play state 
-            State.playState();
-        } else {
+        // if e. target has a dataset of tab 
+        if(e.target.dataset.tab) {
+            const resultBoard = document.querySelector('.result-board').style.display;
             
-            // run the homeState
-            State.homeState();
+            // if the result board is shown remove it 
+            if(resultBoard === 'block') {
+                State.removeResult();
+            }
+
+            // checkif dataset.tab is either home, play or settings 
+            // e.target is either the link or the icon in the tab-bar, it depends on which was clicked 
+            if(e.target.dataset.tab === 'settings') {
+
+                // run the settings State 
+                State.settingsState();
+            } else if(e.target.dataset.tab === 'play') {
+
+
+                // run the play state 
+                State.playState();
+            } else {
+                
+                // run the homeState
+                State.homeState();
+            }
         }
 
     }
