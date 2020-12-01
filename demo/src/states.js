@@ -51,10 +51,17 @@ class State {
     }
 
     static result(score, totalQuestions, remark, result) {
+        // go to the top of the page 
+        window.scrollTo(0, 0);
+        
         ui.showResult(score, totalQuestions, remark, result);
     }
     
     static removeResult() {
         ui.removeResult();
+    }
+
+    static loading() {
+        ui.showLoader();
     }
 }

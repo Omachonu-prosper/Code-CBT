@@ -6,6 +6,7 @@ class UI {
         this.tabBar = document.querySelector('.tab-bar')
         this.mainContent = document.querySelector('.main-content');
         this.resultBoard = document.querySelector('.result-board')
+        this.holder = document.querySelector('.holder');
 
     }
 
@@ -212,6 +213,10 @@ class UI {
 
         this.resultBoard.innerHTML = output;
 
+        // remove every thing on the main content 
+        this.mainContent.innerHTML = '';
+
+
         // determine the color to give to the result h1 
         if(result === 'pass') {
             document.querySelector('.remark').style.color = '#28a745';
@@ -224,6 +229,19 @@ class UI {
 
     removeResult() {
         this.resultBoard.style.display = 'none';
+    }
+
+    showLoader() {
+        let output = '';
+        
+        output += `
+        <div class="loader">
+            <img src="/assets/img/loading.gif" alt="Loader">
+        </div>
+        `;
+
+        this.mainContent.innerHTML = output;
+
     }
 
 }

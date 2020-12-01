@@ -47,6 +47,7 @@ class StateHandler {
             State.settingsState();
         } else if(e.target.dataset.tab === 'play') {
 
+
             // run the play state 
             State.playState();
         } else {
@@ -58,56 +59,66 @@ class StateHandler {
     }
 
     gameStart(e) {
-        // if there is a category in the element's dataset 
+        
+            // if there is a category in the element's dataset 
         if(e.target.dataset.category) {
-            this.gameInProgress = true;
-            this.gameCategory = e.target.dataset.category;
-            this.gameFile = e.target.dataset.file;
+            //    show the loader first 
+            State.loading();
 
-            CodeCBT.getRandomQuestions(this.gameCategory, this.gameFile, 9)
-                    .then(questions => {
-                        // set the questions key to the fetched questions 
-                        this.questions = questions;
-                        // set the score to 0 
-                        this.score = 0;
-                        
-                        // run the game with all questions 
-                        State.gameInProgress(questions);
-                    })
-        }    
+            setTimeout(() => {
+                this.gameInProgress = true;
+                this.gameCategory = e.target.dataset.category;
+                this.gameFile = e.target.dataset.file;
+
+                CodeCBT.getRandomQuestions(this.gameCategory, this.gameFile, 9)
+                        .then(questions => {
+                            // set the questions key to the fetched questions 
+                            this.questions = questions;
+                            // set the score to 0 
+                            this.score = 0;
+                            
+                            // run the game with all questions 
+                            State.gameInProgress(questions);
+                        })
+            }, 1000);
+        }  
     }
 
     static submit(e) {
         // if what was clicked was the submit button 
         if(e.target.id === 'submit') {
-            // loopthrough all the questions 
-            this.questions.forEach(question => {
-                const radioBtns = document.querySelectorAll(`.form-check-input[name=${question.id}]`);
+            State.loading();
 
-                // loop through all radios for a particular question 
-                radioBtns.forEach(btn => {
-                    // if any option was picked
-                    if(btn.checked) {
-                        const checkedLabelText = btn.nextElementSibling.innerText;
-                    
-                        // check if what is checked === the answer 
-                        // if labelText === question.answer
-                        if(checkedLabelText === question.answer) {
-                            // add one to the score 
-                            this.score += 1;
+            setTimeout(() => {
+                // loopthrough all the questions 
+                this.questions.forEach(question => {
+                    const radioBtns = document.querySelectorAll(`.form-check-input[name=${question.id}]`);
+
+                    // loop through all radios for a particular question 
+                    radioBtns.forEach(btn => {
+                        // if any option was picked
+                        if(btn.checked) {
+                            const checkedLabelText = btn.nextElementSibling.innerText;
+                        
+                            // check if what is checked === the answer 
+                            // if labelText === question.answer
+                            if(checkedLabelText === question.answer) {
+                                // add one to the score 
+                                this.score += 1;
+                            }
                         }
-                    }
+                    })
                 })
-            })
 
-            // run to see if the player passed or not 
-            passOrFail(this.score, this.questions.length);   
-            
-            this.gameInProgress = false;
-            this.gameCategory = null;
-            this.gameFile = null;
-            this.questions = null;
-            this.score = 0;
+                // run to see if the player passed or not 
+                passOrFail(this.score, this.questions.length);   
+                
+                this.gameInProgress = false;
+                this.gameCategory = null;
+                this.gameFile = null;
+                this.questions = null;
+                this.score = 0;
+            }, 800);
         }
     } 
 
