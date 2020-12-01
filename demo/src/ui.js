@@ -187,14 +187,14 @@ class UI {
         this.mainContent.innerHTML = output;
     }
 
-    showResult(score, totalQuestions) {
+    showResult(score, totalQuestions, remark, result) {
         this.resultBoard.style.display = 'block';
 
         let output = '';
 
         output += `
         <div class="full-screen p-3">
-            <h1 class="">Good Job</h1>
+            <h1 class="remark">${remark}</h1>
 
             <p class="mt-5 lead">
                 you scored ${score} out of ${totalQuestions} questions
@@ -211,6 +211,15 @@ class UI {
         `
 
         this.resultBoard.innerHTML = output;
+
+        // determine the color to give to the result h1 
+        if(result === 'pass') {
+            document.querySelector('.remark').style.color = '#28a745';
+        } else if (result === 'poor') {
+            document.querySelector('.remark').style.color = 'yellow';
+        } else {
+            document.querySelector('.remark').style.color = 'red';
+        }
     }
 
     removeResult() {

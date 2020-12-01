@@ -50,8 +50,8 @@ class State {
 
     }
 
-    static result(score, totalQuestions) {
-        ui.showResult(score, totalQuestions);
+    static result(score, totalQuestions, remark, result) {
+        ui.showResult(score, totalQuestions, remark, result);
     }
     
     static removeResult() {

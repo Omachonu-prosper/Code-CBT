@@ -99,9 +99,9 @@ class StateHandler {
                     }
                 })
             })
-         
-            // show the results board tho the user 
-            State.result(this.score, this.questions.length);
+
+            // run to see if the player passed or not 
+            passOrFail(this.score, this.questions.length);   
             
             this.gameInProgress = false;
             this.gameCategory = null;
@@ -109,8 +109,29 @@ class StateHandler {
             this.questions = null;
             this.score = 0;
         }
-    }
+    } 
 
+}
+
+// this will determine wether the player passed the test or otherwise 
+function passOrFail(score, total) {
+    let remark,
+        result,
+        percentagePass = Math.floor( (score / total) * 100 );
+
+    if( percentagePass >= 50 ) {
+        remark = 'Excellent work!!';
+        result = 'pass';
+    } else if ( percentagePass >= 30 && percentagePass < 50) {
+        remark = 'Not bad!!';
+        result = 'poor';
+    } else if ( percentagePass < 30 ) {
+        remark = 'Better luck next time!!';
+        result = 'fail';
+    }
+    
+    // show the results board to the user 
+    State.result(score, total, remark, result);
 }
 
 // Event listeners (this should come last) 
