@@ -77,19 +77,19 @@ class UI {
             <h2 class="text-center mb-3">Pick a category</h2>
 
             <div class="list-group play-list mx-auto">
-                <a href="#tab=playing" class="list-group-item" data-category="javascript" data-file="js.json">
+                <a href="#tab=playing" class="list-group-item" data-category="javascript" data-file="js.json" onclick="appCtrl.gameStart(this)">
                     JavaScript
                 </a>
 
-                <a href="#tab=playing" class="list-group-item" data-category="web_dev" data-file="web.json">
+                <a href="#tab=playing" class="list-group-item" data-category="web_dev" data-file="web.json" onclick="appCtrl.gameStart(this)">
                     Web Development
                 </a>
 
-                <a href="#tab=playing" class="list-group-item" data-category="version_control" data-file="git.json">
+                <a href="#tab=playing" class="list-group-item" data-category="version_control" data-file="git.json" onclick="appCtrl.gameStart(this)">
                     Git
                 </a>
 
-                <a href="#tab=playing" class="list-group-item" data-category="version_control" data-file="github.json">
+                <a href="#tab=playing" class="list-group-item" data-category="version_control" data-file="github.json" onclick="appCtrl.gameStart(this)">
                     GitHub
                 </a>
             </div>
@@ -182,7 +182,7 @@ class UI {
         })
 
         output += `
-        <button class="btn btn-success mx-auto d-block my-5" id="submit" type="submit">
+        <button class="btn btn-success mx-auto d-block my-5" id="submit" type="submit" onclick="appCtrl.submit()">
             Submit
         </button>
         `
@@ -205,11 +205,17 @@ class UI {
                 </p>
 
                 <div class="game-over-links">
-                    <a href="#tab=play" data-tab="play" class="btn btn-success my-2 mx-1">Pick a category</a>
+                    <a href="#tab=play" data-tab="play" class="btn btn-success my-2 mx-1" onclick="appCtrl.decideStateOnTabClick(this)">
+                        Pick a category
+                    </a>
                     
-                    <a href="#tab=home" data-tab="home" class="btn btn-success my-2 mx-1">Go home</a> 
+                    <a href="#tab=home" data-tab="home" class="btn btn-success my-2 mx-1" onclick="appCtrl.decideStateOnTabClick(this)">
+                        Go home
+                    </a> 
 
-                    <a href="#tab=settings" data-tab="settings" class="btn btn-success my-2 mx-1">Go to settings</a>
+                    <a href="#tab=settings" data-tab="settings" class="btn btn-success my-2 mx-1" onclick="appCtrl.decideStateOnTabClick(this)">
+                        Go to settings
+                    </a>
                 </div>
             </div>
         </div>
@@ -242,7 +248,12 @@ class UI {
         `;
 
         this.mainContent.innerHTML = output;
+    }
 
+    showErrorOnMainContent(errorMsg) {
+        let output = errorMsg;
+
+        this.mainContent.innerHTML = output;
     }
 
 }

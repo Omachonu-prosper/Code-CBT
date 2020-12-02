@@ -64,4 +64,22 @@ class State {
     static loading() {
         ui.showLoader();
     }
+
+    static gameStartError(error, category, file) {
+        const errorMsg = `
+        <p class="lead text-center mt-4">
+            Sorry an error occured while trying to connect
+            <br>
+
+            Details: ${error.message}
+
+            <br>
+            <a href="#tab=playing" data-category="${category}" data-file="${file}" onclick="appCtrl.gameStart(this)">
+                Reload
+            </a>
+        </p>
+        `
+        
+        ui.showErrorOnMainContent(errorMsg)
+    }
 }

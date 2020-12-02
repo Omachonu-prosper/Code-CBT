@@ -29,21 +29,21 @@
     <div class="holder my-5 container">
         <section class="tab-bar mx-auto text-center">
             <div class="list-group list-group-horizontal">
-                <a href="#tab=home" data-tab="home" class="list-group-item list-group-item-action active" id="home">
+                <a href="#tab=home" data-tab="home" class="list-group-item list-group-item-action active" id="home" onclick="appCtrl.decideStateOnTabClick(this)">
                     <i class="fa fa-home" data-tab="home"></i>
                 </a>
 
-                <a href="#tab=play" data-tab="play" class="list-group-item list-group-item-action" id="play">
+                <a href="#tab=play" data-tab="play" class="list-group-item list-group-item-action" id="play" onclick="appCtrl.decideStateOnTabClick(this)">
                     <i class="fa fa-gamepad" data-tab="play"></i>
                 </a>
 
-                <a href="#tab=settings" data-tab="settings" class="list-group-item list-group-item-action" id="settings">
+                <a href="#tab=settings" data-tab="settings" class="list-group-item list-group-item-action" id="settings" onclick="appCtrl.decideStateOnTabClick(this)">
                     <i class="fa fa-wrench" data-tab="settings"></i>
                 </a>
               </div>
 
               <div class="list-group d-none list-group-horizontal">
-                <a href="#tab=play" data-tab="play" class="list-group-item list-group-item-action" id="play">
+                <a href="#tab=play" data-tab="play" class="list-group-item list-group-item-action" id="play" onclick="appCtrl.decideStateOnTabClick(this)">
                     <i class="fa fa-gamepad" data-tab="play"> back </i>
                 </a>
               </div>
