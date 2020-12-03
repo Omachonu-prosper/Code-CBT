@@ -12,7 +12,7 @@ class State {
 
         location.hash = '#tab=home';
 
-        ui.showTable();
+        ui.noRegisteredUser();
     }
 
     // play state 

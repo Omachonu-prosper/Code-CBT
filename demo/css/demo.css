@@ -1,3 +1,7 @@
+.body {
+    position: relative;
+}
+
 .list-group-item.active {
     background-color: #2ea44f;
     border-color: var(--primary);
@@ -56,4 +60,12 @@
 /* loaders  */
 .loader {
     text-align: center;
+}
+
+/* alerts */
+.alert {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
 }

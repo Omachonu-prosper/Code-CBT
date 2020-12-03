@@ -32,6 +32,26 @@ class UI {
             this.tabBar.lastElementChild.classList.remove('d-none');
         }
     }
+
+    noRegisteredUser() {
+        // what to show if the user has not added his name 
+
+        // show the tab with all links in it
+        this.showTab(1)
+
+        let output = '';
+
+        output = `
+            <p class="p-3" style="background-color: #e9ecef; color: #495057">
+                You have no saved game data. For your game'sdata to be saved to session storage, set a user in the settings tab 
+                    <a href="#tab=settings" >
+                    <i class="fa fa-wrench" data-tab="settings" id="settings" onclick="appCtrl.decideStateOnTabClick(this)"></i>
+                </a>
+            </p>
+        `;
+
+        this.mainContent.innerHTML = output;
+    }
     
     // show table for home state 
     showTable() {
@@ -114,21 +134,26 @@ class UI {
             <div class="form-row align-items-center">
                 <div class="col-12">
                     <label class="sr-only" for="inlineFormInput">Name</label>
-                    <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="player Name">
+                    <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Player Name">
+                    <div class="invalid-feedback" id="form-invalid">
+                        
+                    </div>
                 </div>
 
                 <div class="col-12 my-1">
                     <label class="" for="inlineFormCustomSelect">Number of Questions</label>
                     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                        <option selected> Default (10) </option>
-                        <option value="1">five (5)</option>
-                        <option value="2">fiveteen (15)</option>
-                        <option value="3">twenty (20)</option>
+                        <option value="10" selected> Default (10) </option>
+                        <option value="5">five (5)</option>
+                        <option value="15">fiveteen (15)</option>
+                        <option value="20">twenty (20)</option>
                     </select>
                 </div>              
                 
-                <div class="col-12 mt-3">
-                    <button type="submit" class="btn btn-primary mb-2">Save Changes</button>
+                <div class="col-12 mt-3" onclick="appCtrl.saveUserPreferences()">
+                    <button type="submit" class="btn btn-primary mb-2">
+                        Save Changes
+                    </button>
                 </div>
             </div>
         </form>
@@ -254,6 +279,31 @@ class UI {
         let output = errorMsg;
 
         this.mainContent.innerHTML = output;
+    }
+
+    static showAlert(msg, type, duration = 20000) {
+        let alert = document.querySelector('.alert');
+
+        // if no other alert on the page 
+        if( alert === null ) {
+            // create the alert 
+            alert = document.createElement('div');
+            // add the classes to it 
+            alert.className = `alert ${type} text-center`;
+            // create the text node 
+            alert.appendChild(document.createTextNode(msg));
+            // append the alert to the body
+            document.body.appendChild(alert);
+
+            // after the given duration remove the alert 
+            setTimeout(() => {
+                alert.remove();
+            }, duration)
+            
+        } else { // if there is one remove it
+            alert.remove();
+        }
+
     }
 
 }

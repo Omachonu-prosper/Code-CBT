@@ -33,6 +33,18 @@ const appCtrl = ( () => {
         State.result(score, total, remark, result);
     }
 
+    function validateForm(inputValue) {
+        // regular expression for name to be two or more letters
+        const regExp = /^[\w]{2,}\s/;
+        
+        // if regExp is found in the inputValue
+        if(regExp.test(inputValue)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     const stateHandler = new StateHandler();
    
     return {
@@ -88,7 +100,7 @@ const appCtrl = ( () => {
                 stateHandler.gameCategory = element.dataset.category;
                 stateHandler.gameFile = element.dataset.file;
 
-                CodeCBT.getRandomQuestions(stateHandler.gameCategory, stateHandler.gameFile, 9)
+                CodeCBT.getRandomQuestions( stateHandler.gameCategory, stateHandler.gameFile, DB.getUserPreferences().noOfQuestions )
                         .then(questions => {
                             // set the questions key to the fetched questions 
                             stateHandler.questions = questions;
@@ -133,7 +145,22 @@ const appCtrl = ( () => {
             stateHandler.gameFile = null;
             stateHandler.questions = null;
             stateHandler.score = 0;
-        } 
+        },
+        saveUserPreferences() {
+            const name = document.querySelector('#inlineFormInput').value,
+                    noOfQuestions = Number(document.querySelector('#inlineFormCustomSelect').value);
+            
+            // if the validateForm function returns true
+            if( validateForm(name) ) {
+                // save to localStorage 
+                DB.saveUserPreferences(name, noOfQuestions)
+                // show the alert 
+                UI.showAlert('Changes saved!!', 'alert-success', 6000);
+            } else {
+                UI.showAlert('Not saved. Player name must be at leat 2 letters and not start with a space', 'alert-danger', 6000);
+            }
+            
+        }
 
     }
 })();
