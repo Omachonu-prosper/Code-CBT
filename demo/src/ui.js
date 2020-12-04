@@ -43,7 +43,7 @@ class UI {
 
         output = `
             <p class="p-3" style="background-color: #e9ecef; color: #495057">
-                You have no saved game data. For your game'sdata to be saved to session storage, set a user in the settings tab 
+                You have no saved game data. For your game's data to be saved to session storage, set a user in the settings tab 
                     <a href="#tab=settings" >
                     <i class="fa fa-wrench" data-tab="settings" id="settings" onclick="appCtrl.decideStateOnTabClick(this)"></i>
                 </a>
@@ -150,8 +150,8 @@ class UI {
                     </select>
                 </div>              
                 
-                <div class="col-12 mt-3" onclick="appCtrl.saveUserPreferences()">
-                    <button type="submit" class="btn btn-primary mb-2">
+                <div class="col-12 mt-3">
+                    <button type="submit" class="btn btn-primary mb-2" onclick="appCtrl.saveUserPreferences()">
                         Save Changes
                     </button>
                 </div>
@@ -284,8 +284,16 @@ class UI {
     static showAlert(msg, type, duration = 20000) {
         let alert = document.querySelector('.alert');
 
-        // if no other alert on the page 
-        if( alert === null ) {
+        // if there is an alert and its message(msg) is a new one 
+        if( alert !== null && alert.innerText !== msg ) {
+            // remove the alert-danger class 
+            alert.classList.remove('alert-danger')
+            // add the alert-success class 
+            alert.classList.add('alert-success')
+            // change the message 
+            alert.innerText = msg;
+        } else if( alert === null ) { // if no other alert on the page 
+            
             // create the alert 
             alert = document.createElement('div');
             // add the classes to it 
