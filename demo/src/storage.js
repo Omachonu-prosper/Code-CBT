@@ -15,4 +15,35 @@ class DB {
 
         return userPreferences
     }
+
+    static saveGameData(name, category, file, score, noOfQuestions) {
+        let gameData = [ ];
+
+        // set the schema(or template) for the new datea to follow
+        const schema = {
+            name,
+            category,
+            file,
+            score,
+            noOfQuestions
+        }
+
+        if( sessionStorage.getItem('gameData') ) { // if someone has already set a user
+            // get the data already in session storage 
+            gameData = JSON.parse( sessionStorage.getItem('gameData') );
+
+        }
+
+        // push the schema with the data to the gameData array 
+        gameData.push(schema);
+        // set the game Data array to sessionStorage 
+        sessionStorage.setItem('gameData', JSON.stringify(gameData) );
+    }
+
+    static getGameData() {
+        let gameData = JSON.parse( sessionStorage.getItem('gameData') );
+
+        return gameData; 
+    }
+
 }

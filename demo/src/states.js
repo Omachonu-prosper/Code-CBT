@@ -12,7 +12,14 @@ class State {
 
         location.hash = '#tab=home';
 
-        ui.noRegisteredUser();
+        let user = DB.getUserPreferences(),
+            gameData = DB.getGameData();
+        
+        if( user === null || gameData === null ) {// if there is no registered user then we should show the notification 
+            ui.noRegisteredUser();
+        } else {
+            ui.showTable(gameData);
+        }
     }
 
     // play state 

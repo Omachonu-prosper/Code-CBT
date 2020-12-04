@@ -43,7 +43,7 @@ class UI {
 
         output = `
             <p class="p-3" style="background-color: #e9ecef; color: #495057">
-                You have no saved game data. For your game's data to be saved to session storage, set a user in the settings tab 
+                You have no saved game data. For your game's data to be saved to session storage, set a user in the settings tab (if you have done this please ignore)
                     <a href="#tab=settings" >
                     <i class="fa fa-wrench" data-tab="settings" id="settings" onclick="appCtrl.decideStateOnTabClick(this)"></i>
                 </a>
@@ -54,15 +54,13 @@ class UI {
     }
     
     // show table for home state 
-    showTable() {
+    showTable(gameData) {
         this.showTab(1)
+
+        let output = ''
         
-        let output = '';
-        
-        output += `    
-        <h2 class="text-center mb-3">Dashboard</h2>
-        
-        <table class="table">
+        output = `
+        <table class="table" id="dashboard-table">
             <thead class="thead-light">
                 <tr>
                 <th scope="col">Player Name</th>
@@ -70,18 +68,35 @@ class UI {
                 <th scope="col">Score</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Omachonu Prosper</td>
-                    <td>Javascript</td>
-                    <td><span class="pass"> 89/100 </span></td>
-                </tr>
-            </tbody>
         </table> 
         `
-
-        // set main contents innerhtml to output 
         this.mainContent.innerHTML = output;
+
+        // insert the table data 
+        this.insertTableData(gameData);
+
+    }
+
+    insertTableData(gameData) {
+        let table = document.querySelector('#dashboard-table'),
+        // set the row count to be equal to the rows length since the row is ) indexed 
+            rowCount = table.rows.length;            
+        
+        gameData.forEach( (data) => { // loop through the gamedata
+        
+            let row = table.insertRow(rowCount), // create a new row
+                cell1 = row.insertCell(0), // create the first cell
+                cell2 = row.insertCell(1), // create the second cell
+                cell3 = row.insertCell(2); // create the third cell
+
+            // apped the cells respective text node to each of them 
+            cell1.appendChild(document.createTextNode( `${ data.name }`) );
+
+            cell2.appendChild(document.createTextNode( `${ data.category }(${ data.file })`) );
+
+            cell3.appendChild(document.createTextNode( `${ data.score }/${ data.noOfQuestions }`)  );
+
+        })
 
     }
 
@@ -151,7 +166,7 @@ class UI {
                 </div>              
                 
                 <div class="col-12 mt-3">
-                    <button type="submit" class="btn btn-primary mb-2" onclick="appCtrl.saveUserPreferences()">
+                    <button type="submit" class="btn btn-success mb-2" onclick="appCtrl.saveUserPreferences()">
                         Save Changes
                     </button>
                 </div>

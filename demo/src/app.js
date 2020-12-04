@@ -35,7 +35,7 @@ const appCtrl = ( () => {
 
     function validateForm(inputValue) {
         // regular expression for name to be two or more letters
-        const regExp = /^[\w]{2,}\s/;
+        const regExp = /^[\w]{2,}/;
         
         // if regExp is found in the inputValue
         if(regExp.test(inputValue)) {
@@ -139,9 +139,16 @@ const appCtrl = ( () => {
                 })
             })
 
+            const userPref = DB.getUserPreferences();
+            // if there is a current user 
+            if( userPref !== null ) {
+                // set the game data to localStorage 
+                DB.saveGameData(userPref.name, stateHandler.gameCategory, stateHandler.gameFile, stateHandler.score, stateHandler.questions.length);
+            }
+
             // run to see if the player passed or not 
             passOrFail(stateHandler.score, stateHandler.questions.length);   
-            
+            // get ready for a new game 
             stateHandler.gameInProgress = false;
             stateHandler.gameCategory = null;
             stateHandler.gameFile = null;
@@ -159,8 +166,6 @@ const appCtrl = ( () => {
                 // show the alert 
                 UI.showAlert('Changes saved!!', 'alert-success', 3000);
 
-                // set the input to an empty string 
-                name = '';
             } else {
                 UI.showAlert('Not saved. Player name must be at leat 2 letters and not start with a space', 'alert-danger', 5000);
             }
