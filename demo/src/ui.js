@@ -300,8 +300,6 @@ class UI {
                 alert.remove();
             }, duration)
             
-        } else { // if there is one remove it
-            alert.remove();
         }
 
     }
