@@ -99,8 +99,10 @@ const appCtrl = ( () => {
                 stateHandler.gameInProgress = true;
                 stateHandler.gameCategory = element.dataset.category;
                 stateHandler.gameFile = element.dataset.file;
+                // if nothing has been set in localStorage use the default of 10 questions 
+                const noOfQuestions = DB.getUserPreferences() === null ? 9 : DB.getUserPreferences().noOfQuestions ;
 
-                CodeCBT.getRandomQuestions( stateHandler.gameCategory, stateHandler.gameFile, DB.getUserPreferences().noOfQuestions )
+                CodeCBT.getRandomQuestions( stateHandler.gameCategory, stateHandler.gameFile, noOfQuestions)
                         .then(questions => {
                             // set the questions key to the fetched questions 
                             stateHandler.questions = questions;
@@ -147,7 +149,7 @@ const appCtrl = ( () => {
             stateHandler.score = 0;
         },
         saveUserPreferences() {
-            const name = document.querySelector('#inlineFormInput').value,
+            let name = document.querySelector('#inlineFormInput').value,
                     noOfQuestions = Number(document.querySelector('#inlineFormCustomSelect').value);
             
             // if the validateForm function returns true
@@ -155,9 +157,12 @@ const appCtrl = ( () => {
                 // save to localStorage 
                 DB.saveUserPreferences(name, noOfQuestions)
                 // show the alert 
-                UI.showAlert('Changes saved!!', 'alert-success', 6000);
+                UI.showAlert('Changes saved!!', 'alert-success', 3000);
+
+                // set the input to an empty string 
+                name = '';
             } else {
-                UI.showAlert('Not saved. Player name must be at leat 2 letters and not start with a space', 'alert-danger', 6000);
+                UI.showAlert('Not saved. Player name must be at leat 2 letters and not start with a space', 'alert-danger', 5000);
             }
             
         }
