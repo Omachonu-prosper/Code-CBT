@@ -1,3 +1,7 @@
+.body {
+    position: relative;
+}
+
 .list-group-item.active {
     background-color: #2ea44f;
     border-color: var(--primary);
@@ -33,9 +37,6 @@
     overflow: auto;
     backdrop-filter: blur(2px);
     z-index: 100;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
 }
 
 .result-board {
@@ -49,44 +50,22 @@
     max-width: 30rem;
 }
 
-/* loaders  */
-.loader {
-    display: none;
-    margin: 4rem auto;
-    width: 4rem;
-    height: 4rem;
-    border-top: solid 3px var(--success);
-    border-right: solid 3px var(--success);
-    border-radius: 50%;
-    animation-name: loader;
-    animation-duration: .5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+.center-y {
+    height: 100vh;
+    overflow: auto;
+    padding: 4rem 0 2rem 0;
+    margin: 0 auto;
 }
 
-@keyframes loader {
-    0% {
-        transform: rotate(0deg);
-    }
-    10% {
-        transform: rotate(30deg);
-    }
-    20% {
-        transform: rotate(60deg);
-    }
-    40% {
-        transform: rotate(120deg);
-    }
-    60% {
-        transform: rotate(180deg);
-    }
-    80% {
-        transform: rotate(240deg);
-    }
-    90% {
-        transform: rotate(300deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+/* loaders  */
+.loader {
+    text-align: center;
+}
+
+/* alerts */
+.alert {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
 }

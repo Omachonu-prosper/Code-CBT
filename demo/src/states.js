@@ -5,16 +5,29 @@ class State {
     // turning page to states
     // home state 
     static homeState() {
-        ui.removeAndSetActiveTab(ui.homeTab, ui.playTab, ui.settingsTab)
+        // go to the top of the page 
+        window.scrollTo(0, 0);
+        
+        ui.removeAndSetActiveTab(ui.homeTab, ui.playTab, ui.settingsTab);
 
         location.hash = '#tab=home';
 
-        ui.showTable();
+        let user = DB.getUserPreferences(),
+            gameData = DB.getGameData();
+        
+        if( user === null || gameData === null ) {// if there is no registered user then we should show the notification 
+            ui.noRegisteredUser();
+        } else {
+            ui.showTable(gameData);
+        }
     }
 
     // play state 
     static playState() {
-        ui.removeAndSetActiveTab(ui.playTab, ui.homeTab, ui.settingsTab)
+        // go to the top of the page 
+        window.scrollTo(0, 0);
+        
+        ui.removeAndSetActiveTab(ui.playTab, ui.homeTab, ui.settingsTab);
 
         location.hash = '#tab=play';
 
@@ -23,7 +36,10 @@ class State {
 
     // settings state 
     static settingsState() {
-        ui.removeAndSetActiveTab(ui.settingsTab, ui.playTab, ui.homeTab)
+        // go to the top of the page 
+        window.scrollTo(0, 0);
+        
+        ui.removeAndSetActiveTab(ui.settingsTab, ui.playTab, ui.homeTab);
 
         location.hash = '#tab=settings';
 
@@ -32,17 +48,45 @@ class State {
 
     // game in progress 
     static gameInProgress(questions) {
+        // go to the top of the page 
+        window.scrollTo(0, 0);
+        
         location.hash = `#tab=playing`;
 
         ui.showGameState(questions);
 
     }
 
-    static result(score, totalQuestions) {
-        ui.showResult(score, totalQuestions);
+    static result(score, totalQuestions, remark, result) {
+        // go to the top of the page 
+        window.scrollTo(0, 0);
+        
+        ui.showResult(score, totalQuestions, remark, result);
     }
     
     static removeResult() {
         ui.removeResult();
+    }
+
+    static loading() {
+        ui.showLoader();
+    }
+
+    static gameStartError(error, category, file) {
+        const errorMsg = `
+        <p class="lead text-center mt-4">
+            Sorry an error occured while trying to connect
+            <br>
+
+            Details: ${error.message}
+
+            <br>
+            <a href="#tab=playing" data-category="${category}" data-file="${file}" onclick="appCtrl.gameStart(this)">
+                Reload
+            </a>
+        </p>
+        `
+        
+        ui.showErrorOnMainContent(errorMsg)
     }
 }
