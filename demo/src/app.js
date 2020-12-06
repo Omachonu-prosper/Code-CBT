@@ -100,7 +100,7 @@ const appCtrl = ( () => {
                 stateHandler.gameCategory = element.dataset.category;
                 stateHandler.gameFile = element.dataset.file;
                 // if nothing has been set in localStorage use the default of 10 questions 
-                const noOfQuestions = DB.getUserPreferences() === null ? 9 : DB.getUserPreferences().noOfQuestions ;
+                const noOfQuestions = DB.getUserPreferences() === null ? 10 : DB.getUserPreferences().noOfQuestions ;
 
                 CodeCBT.getRandomQuestions( stateHandler.gameCategory, stateHandler.gameFile, noOfQuestions)
                         .then(questions => {
