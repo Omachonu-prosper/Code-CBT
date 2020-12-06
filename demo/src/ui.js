@@ -120,12 +120,12 @@ class UI {
                     Web Development
                 </a>
 
-                <a href="#tab=playing" class="list-group-item" data-category="version_control" data-file="git.json" onclick="appCtrl.gameStart(this)">
-                    Git
+                <a href="#tab=playing" class="list-group-item disabled" data-category="version_control" data-file="git.json">
+                    Git <span style="color: var(--danger)">( coming soon )</span>
                 </a>
 
-                <a href="#tab=playing" class="list-group-item" data-category="version_control" data-file="github.json" onclick="appCtrl.gameStart(this)">
-                    GitHub
+                <a href="#tab=playing" class="list-group-item disabled" data-category="version_control" data-file="github.json">
+                    GitHub <span style="color: var(--danger)">( coming soon )</span>
                 </a>
             </div>
         </div>

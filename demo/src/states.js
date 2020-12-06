@@ -78,8 +78,8 @@ class State {
             Sorry an error occured while trying to connect
             <br>
 
-            Details: ${error.message}
-
+            Check your internet connection
+            
             <br>
             <a href="#tab=playing" data-category="${category}" data-file="${file}" onclick="appCtrl.gameStart(this)">
                 Reload
