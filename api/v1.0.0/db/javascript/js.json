@@ -121,6 +121,78 @@
                 "Generator function",
                 "Asynchronous function"
             ]
+        },
+        {
+            "id": "js11",
+            "source": "code CBT",
+            "question": "What is the major differience between array.indexOf(...) and array.includes(...)",
+            "answer": "'indexOf' returns -1 and 'includes' returns false if no index is found",
+            "options": [
+                "'indexOf' returns true or false depending on the results found in the array",
+                "'indexOf' returns -1 and 'includes' returns false if no index is found",
+                "There is absolutely no differience",
+                "There is no such thing as array.includes (it is not an array method)"
+            ]
+        },
+        {
+            "id": "js12",
+            "source": "code CBT",
+            "question": "A primitive data type is?",
+            "answer": "A data type which can not hold more than one piece of data",
+            "options": [
+                "A data type which can hold infinite amount of data",
+                "A data type which can not hold more than one piece of data",
+                "A data type which returns an Object",
+                "None of the above"
+            ]
+        },
+        {
+            "id": "js13",
+            "source": "code CBT",
+            "question": "The reference data type can be defined as?",
+            "answer": "One whose data can be stored to be referenced later",
+            "options": [
+                "One which returns an Object literal",
+                "One whose data can be stored to be referenced later",
+                "One which can not hold more than one piece of data",
+                "One which can hold infinite amount of data"
+            ]
+        },
+        {
+            "id": "js14",
+            "source": "code CBT",
+            "question": "Which of the following is not a primitive data type",
+            "answer": "Symbols",
+            "options": [
+                "Strings",
+                "Symbols",
+                "Numbers",
+                "Null"
+            ]
+        },
+        {
+            "id": "js15",
+            "source": "code CBT",
+            "question": "What is the effect of the three dots(...) as a parameter in a function",
+            "answer": "It makes it possible for the function to take a large number of arguments that we dont have to define",
+            "options": [
+                "It makes it possible for the function to take a large number of arguments that we dont have to define",
+                "The function will return a SyntaxError",
+                "The function becomes a generator function",
+                "It makes the function to take only numbers as arguements"
+            ]
+        },
+        {
+            "id": "js16",
+            "source": "code CBT",
+            "question": "What can the three dots(...) in this function be called. function dots(me, you, ...) { console.log('Dots are cool') }",
+            "answer": "The rest parameter",
+            "options": [
+                "The rest parameter",
+                "Infinity parameter",
+                "Loop parameter",
+                "Dotting parameter syntax"
+            ]
         }
 
     ]
