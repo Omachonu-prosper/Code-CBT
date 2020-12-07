@@ -1,0 +1,151 @@
+{
+    "category": "web_dev",
+    "category_initial": "web",
+    "questions": [
+        {
+            "id": "web1",
+            "source": "code CBT",
+            "question": "Who is regarded as the father of the internet",
+            "answer": "Tim Berners Lee",
+            "options": [
+                "Sir Robert Boyle",
+                "Chalce Berners Lee",
+                "Tim Berners Lee",
+                "Tim Bennass Lee"
+            ]
+        },
+        {
+            "id": "web2",
+            "source": "code CBT",
+            "question": "HTML stads for",
+            "answer": "Hyper Text Markup Language",
+            "options": [
+                "Hyper Text Makeup Language",
+                "Hyper Test Markup Language",
+                "Hyper Text Markup Language",
+                "Hyper Text Markers Language"
+            ]
+        },
+        {
+            "id": "web3",
+            "source": "code CBT",
+            "question": "CSS stads for",
+            "answer": "Cascading Style Sheet",
+            "options": [
+                "Cascading Syle Sheet",
+                "Cascade Stylers Sheet",
+                "Cascading Style Shet",
+                "Cascading Style Sheet"
+            ]
+        },
+        {
+            "id": "web4",
+            "source": "code CBT",
+            "question": "One of the things flex box did not solve was ______",
+            "answer": "Creating 3D layouts",
+            "options": [
+                "Creating clean float-less layouts",
+                "Creating 2D layouts",
+                "Creating 3D layouts",
+                "Aligning elements with ease"
+            ]
+        },
+        {
+            "id": "web5",
+            "source": "code CBT",
+            "question": "The 'display: block' property and value play the role of",
+            "answer": "Turning inline elements to block elements",
+            "options": [
+                "Turning elements to digital blocks",
+                "Turning all elements to divs",
+                "Blocking other elements flow",
+                "Turning inline elements to block elements"
+            ]
+        },
+        {
+            "id": "web6",
+            "source": "code CBT",
+            "question": "Which of the following is advisable for making your code DRY",
+            "answer": "Using external style sheets",
+            "options": [
+                "Using internal style sheets",
+                "Using inline styles",
+                "Using external style sheets",
+                "Neglect styling with CSS"
+            ]
+        },
+        {
+            "id": "web7",
+            "source": "code CBT",
+            "question": "If I have conflicting styles from differient style sheets, in which case do you think the style on the left will NOT overide the one on the right?",
+            "answer": "A class vs an id",
+            "options": [
+                "A class vs an id",
+                "An id in a link tag above vs a class in a link tag below",
+                "A class with an !important keyword vs an inline style",
+                "An id:hover vs an id"
+            ]
+        },
+        {
+            "id": "web8",
+            "source": "code CBT",
+            "question": "What are the three major pillars of responsive designs",
+            "answer": "Flexible grid based layouts, responsive images, media queries",
+            "options": [
+                "Flexible grid based layouts, fancy and colorful text, responsive images",
+                "Flexible grid based layouts, responsive images, media queries",
+                "Animatable layouts, using drop down menus, media queries",
+                "Flexible grid based layouts, responsive images, meta queries"
+            ]
+        },
+        {
+            "id": "web9",
+            "source": "code CBT",
+            "question": "All the following except one will help in battling browsers support for new properties",
+            "answer": "Using websocket to compile your css down to more supported code",
+            "options": [
+                "Using browser prefixes",
+                "Using the @supports key role",
+                "Using websocket to compile your css down to more supported code",
+                "Using only well supported properties"
+            ]
+        },
+        {
+            "id": "web10",
+            "source": "code CBT",
+            "question": "What does the acronym SEO mean",
+            "answer": "Search Engine Optimisation",
+            "options": [
+                "Search Engine Operations",
+                "Search Engine Overload",
+                "Search Engine Overdrive",
+                "Search Engine Optimisation"
+            ]
+        },
+        {
+            "id": "web11",
+            "source": "code CBT",
+            "question": "Which of the following is not a value of the 'justify-content' flex-box property",
+            "answer": "Baseline",
+            "options": [
+                "Center",
+                "Space-evenly",
+                "Space-around",
+                "Baseline"
+            ]
+        },
+        {
+            "id": "web11",
+            "source": "code CBT",
+            "question": "The CSS position absolute property places an element in response to the top, bottom, right and left properties on ______",
+            "answer": "The first parent with position relative",
+            "options": [
+                "The first parent with position relative",
+                "The elements parent",
+                "The elements child",
+                "The body element"
+            ]
+        }
+
+    ]
+}
