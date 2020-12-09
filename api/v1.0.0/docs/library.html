@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code CBT | JavaScript Library</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/assets/img/logo-favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg background-primary navbar-dark">
+        <a class="navbar-brand" href="#">
+            &LeftAngleBracket; Code CBT / &RightAngleBracket;
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="docs.html">Docs </a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  V1.0.0
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item active" href="#"> v1.0.0 </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item active" href="#">Current v1.0.0</a>
+                </div>
+            </li>  
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Developer
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="https://github.com/Omachonu-prosper/Code-CBT">
+                     Github 
+                  </a>
+                  <a class="dropdown-item" href="./download.html">Download</a>
+                  <a class="dropdown-item" href="./contribute.html">Contribute</a>
+                </div>
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link" href="#"> JS-library </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/demo/demo.html">Demo </a>
+            </li>
+
+          </ul>
+
+        </div>
+    </nav>
+
+    <!-- main content  -->
+    <div class="main my-5">
+      <div class="container">
+
+        <h1 class="display-sl"> The Official JavaScript library for CodeCBT</h1>
+        <p class="lead text-center pt-3">
+            This library takes away the stress of you fetching the data from our servers.
+            it helps you to make these calls using pre-created made methods, all you need do is to setup the JS file and make the call.
+            (This library is what the CodeCBT demo project sits on <a href="/demo/demo.html">View demo</a>)
+        </p>
+
+        <div class="text-center my-5">
+            <a href="/code_cbt_lib/v1.0.0/code_cbt.zip" class="btn btn-success" >
+                <i class="fa fa-file-archive pr-2"></i>
+                
+                Download code_cbt.js v1.0.0 (1.32kb)
+            </a>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- getting started  -->
+        <div class="my-5 pt-3">
+            <h2>Setting up the environment</h2>
+            <p>
+                There are two ways to get the library up and running.
+                The first is by using the code_cbt.js CDN, and the second by downloading the file.
+            </p>
+
+            <!-- using cdn  -->
+            <div class="my-4 pl-3">
+                <h3>code_cbt.js CDN</h3>
+                <code class="mt-4 block">
+                  CDN link:
+  
+                  <div class="code">
+                    <code class="no-break">
+                      http://127.0.0.1:5500/code_cbt_lib/v1.0.0/code_cbt.js
+                    </code>
+                  </div>
+                </code>
+            </div>
+
+            <!-- downloading the file  -->
+            <div class="my-4 pl-3">
+                <h3>Downloading the code_cbt.js file</h3>
+
+                <p>
+                  The code cbt library is quite small. The archieved file is only 1.32Kb and the JS file when uncompressed is about 5.1Kb. Click <a href="/code_cbt_lib/v1.0.0/code_cbt.zip" class="px-2">
+                    <i class="fa fa-file-archive"></i>
+                    
+                    here
+                </a> to begin download (v1.0.0);
+                </p>
+            </div>
+        </div>
+
+        <!-- getting started  -->
+        <div class="my-5 pt-3">
+          <a id="getting-started"></a>
+          <h2>Getting Started</h2>
+          <p>
+            With the files or CDN connections established, put the code_cbt library above other script tags (if you are working with the browser) so you can be able to use the functions.
+
+            <div class="m-3">
+              <img src="/assets/img/scripts.png" class="img-fluid" alt="script tag placement">
+              <figcaption class="figure-caption pt-3">The right way to place your scrip tags (code_cbt.js or its CDN should be above)</figcaption>
+            </div>
+          </p>
+        </div>
+
+        <!-- Code CBT.js Methods  -->
+        <div class="my-5 pt-3">
+          <h2>Code CBT.js Methods</h2>
+          <p>
+            The CodeCBT constructor makes use of static methods so these methods can be called by inserting the method name after the constructor name (eg: CodeCBT.< method name >).
+
+            Below all Methods that help make the fetch calls for you are shown with detailed examples and explanation.
+
+            <div class="mssg mssg-warn my-3">
+              <div class="mssg-icon">
+                  <i class="fa fa-bell"></i>
+              </div>
+              <div class="mssg-content">
+                  <ul>
+                    <li>
+                      CodeCBT .js makes calls to specific categories and files we specify. A list of all available categories and category initials can be found <a href="./docs.html#available-categories">here</a>.
+                    </li>
+
+                    <li>
+                      All methods return a promise and they do a good job in logging errors to the console.
+                    </li>
+                  </ul> 
+
+              </div>
+            </div>
+
+          </p>
+
+          <!-- get Data  -->
+          <div class="my-4 pl-3">
+              <h3>CodeCBT.getData</h3>
+
+              <p>
+                This method makes http fetch calls to the specified category and file we give to it. It returns all the data it finds in the specified json file.
+              </p>
+              
+              <code class="mt-4 block">
+                Getting all data in a specified file
+
+                <div class="code mb-4">
+                  <code class="no-break">
+                    getData(< category >, < fileName >)
+                  </code>
+                </div>
+
+                Response (if < category > is javascript and < fileName > = js.json)
+
+                <div class="code" style="height: 17rem;">
+                  <code class="no-break">
+                    {
+                      <div class="pl-1">"category": "JavaScript", </div>
+                      <div class="pl-1">"category_initial": "js", </div>
+                      <div class="pl-1">"questions": [ </div>
+                      <div class="pl-2"> { </div>
+                      <div class="pl-3"> "id": "js1", </div>
+                      <div class="pl-3"> "source": "code CBT", </div>
+                      <div class="pl-3"> "question": "What does XHR stand for", </div>
+                      <div class="pl-3">"answer": "XML Http Request", </div>
+                      <div class="pl-3">"options": [ </div>
+                      <div class="pl-4">"Xtensive Http Response", </div>
+                      <div class="pl-4">"Xtensive Http Request", </div>
+                      <div class="pl-4">"XML Http Request", </div>
+                      <div class="pl-4">"XML Http  Response" </div>
+                      <div class="pl-3"> ] </div>
+                      <div class="pl-2"> }... </div>
+                      <div class="pl-1"> ] </div>
+                    }
+                  </code>
+                </div>
+              </code>
+              
+          </div>
+        </div>
+            
+        <!-- get Data  -->
+        <div class="my-4 pl-3">
+            <h3>CodeCBT.getAllQuestions</h3>
+
+            <p>
+              This method returns an array of all questions in the specified json file.
+            </p>
+            
+            <code class="mt-4 block">
+              Getting all questions in a specified file
+
+              <div class="code mb-4">
+                <code class="no-break">
+                  getAllQuestions(< category >, < fileName >)
+                </code>
+              </div>
+
+              Response (if < category > is javascript and < fileName > = js.json)
+
+              <div class="code" style="height: 15rem;">
+                <code class="no-break">
+                  [
+                    <!-- question 1 -->
+                    <div class="pl-1"> { </div>
+                    <div class="pl-3"> "id": "js1", </div>
+                    <div class="pl-3"> "source": "code CBT", </div>
+                    <div class="pl-3"> "question": "What does XHR stand for", </div>
+                    <div class="pl-3">"answer": "XML Http Request", </div>
+                    <div class="pl-3">"options": [ </div>
+                    <div class="pl-4">"Xtensive Http Response", </div>
+                    <div class="pl-4">"Xtensive Http Request", </div>
+                    <div class="pl-4">"XML Http Request", </div>
+                    <div class="pl-4">"XML Http  Response" </div>
+                    <div class="pl-3"> ] </div>
+                    <div class="pl-1"> }, </div>
+
+                    <!-- question 2 -->
+                    <div class="pl-1"> { </div>
+                    <div class="pl-3"> "id": "js2", </div>
+                    <div class="pl-3"> "source": "code CBT", </div>
+                    <div class="pl-3"> "question": "Event delegation is ________", </div>
+                    <div class="pl-3">"answer": "Falling down to children elements from their parents in the DOM tree", </div>
+                    <div class="pl-3">"options": [ </div>
+                    <div class="pl-4">"Moving from children up to their parent in the DOM", </div>
+                    <div class="pl-4">"adding an event listener to a selected element", </div>
+                    <div class="pl-4">"Falling down to children elements from their parents in the DOM tree", </div>
+                    <div class="pl-4">"Waiting for a DOM event to be triggered" </div>
+                    <div class="pl-3"> ] </div>
+                    <div class="pl-1"> },... </div>
+                  ]
+                </code>
+              </div>
+
+            </code>
+              
+          </div>
+
+         <!-- get question by index  -->
+        <div class="my-5 pl-3">
+          <h3>CodeCBT.getQuestionByIndex</h3>
+
+          <p>
+            This method takes three arguements. The first is the category, followed by the file name and lastly (but not the least), the questionIndex. It returns the question at the given index (not the question id).
+          </p>
+          
+          <code class="mt-4 block">
+            Getting a question by its index
+
+            <div class="code mb-4">
+              <code class="no-break">
+                getQuestionByIndex(< category >, < fileName >, < questionIndex >)
+              </code>
+            </div>
+
+            Response (if < category > is javascript, < fileName > = js.json and < questionIndex > = 3 )
+
+            <div class="code">
+              <code class="no-break">
+                {
+                  <div class="pl-1"> { </div>
+                  <div class="pl-3"> "id": "js4", </div>
+                  <div class="pl-3"> "source": "code CBT", </div>
+                  <div class="pl-3"> "question": "All of the following are ways to handle asyncronous calls in JavaScript except using", </div>
+                  <div class="pl-3">"answer": "Reusables", </div>
+                  <div class="pl-3">"options": [ </div>
+                  <div class="pl-4">"Callback functions", </div>
+                  <div class="pl-4">"Async await",</div>
+                  <div class="pl-4">"Reusables", </div>
+                  <div class="pl-4">"Promises" </div>
+                  <div class="pl-3"> ] </div>
+                  <div class="pl-1"> } </div>
+                }
+              </code>
+            </div>
+          </code>
+          
+        </div>
+
+        <div class="my-5 pl-3">
+          <h3>CodeCBT.getQuestionById</h3>
+
+          <p>
+            This method has same syntax as the getQuestionByIndex method but it returns the question whose id corresponds with the specified id (the question id is simply its index + 1). 
+          </p>
+        </div>
+
+        <!-- getRandomQuestions  -->
+        <div class="my-5 pl-3">
+          <h3>CodeCBT.getRandomQuestions</h3>
+
+          <p>
+            This will return an array containing a number of random questions according to the number of questions we pass it to return (the number of questions to return must be a less than the number of questions in the database -1, eg: if the number of questions in the web.json file of the web_dev category is 51 then the highest no of questions we can request is 50).
+
+            <div class="m-3">
+              <img src="/assets/img/getRandomQuestions.png" class="img-fluid" alt="getRandomQuestion method">
+              <figcaption class="figure-caption pt-3">A request to the javascript/js.json file, getting 4 random questions. The first highlight shows the code that makes the call and the second shows the random questions id's</figcaption>
+            </div>
+          </p>
+        </div>
+
+        <!-- getRandomQuestion  -->
+        <div class="my-5 pl-3">
+          <h3>CodeCBT.getRandomQuestion</h3>
+
+          <p>
+            This is simmilar to the getRandomQuestions method but it returns a single random Question. Every other feature is Exactly the samewith the getRandomQuestions method.
+          </p>
+        </div>
+
+        <!-- Supported Browsers  -->
+        <div class="my-5">
+          <h3>Supported Browsers</h3>
+
+          <p>
+            The code_cbt javaScript library supports all modern browsers but it does not support Internet Explorer 11 downwards. Practically any browser which does not support ES6 Classes is not supported. WE ARE WORKING ON THIS ISSUE, THANKS FOR UNDERSTANDING.
+          </p>
+        </div>
+           
+        <!-- container  -->
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="mt-5">
+        <div class="footer-box p-3">
+          <a href="#" class="logo-green">&LeftAngleBracket; Code CBT / &RightAngleBracket;</a>
+
+            <p class="text-muted">Built with love by Omachonu Prosper &copy; 2020 OMC</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/fixes.js"></script>
+
+</body>
+</html>
