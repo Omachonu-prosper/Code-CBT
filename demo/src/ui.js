@@ -161,7 +161,6 @@ class UI {
                         <option value="10" selected> Default (10) </option>
                         <option value="5">five (5)</option>
                         <option value="15">fiveteen (15)</option>
-                        <option value="20">twenty (20)</option>
                     </select>
                 </div>              
                 
