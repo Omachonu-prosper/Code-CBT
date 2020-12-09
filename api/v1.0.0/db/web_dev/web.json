@@ -5,7 +5,7 @@
         {
             "id": "web1",
             "source": "code CBT",
-            "question": "Who is regarded as the father of the internet",
+            "question": "Who is regarded as the inventor of the World Wide Web",
             "answer": "Tim Berners Lee",
             "options": [
                 "Sir Robert Boyle",
@@ -145,7 +145,92 @@
                 "The elements child",
                 "The body element"
             ]
+        },
+        {
+            "id": "web12",
+            "source": "code CBT",
+            "question": "The easiest way to make an element inherit a particular style from it's parent without editing the child everytime we edit the parent is to set the value of the child's property to ______",
+            "answer": "inherit",
+            "options": [
+                "block",
+                "from-parent",
+                "inherit",
+                "clone-parent"
+            ]
+        },
+        {
+            "id": "web13",
+            "source": "code CBT",
+            "question": "The root of our page can be selected using the psuedo selector",
+            "answer": "::root",
+            "options": [
+                "::elem-root",
+                "::page-root",
+                "::*",
+                "::root"
+            ]
+        },
+        {
+            "id": "web14",
+            "source": "code CBT",
+            "question": "which of the following is the correct syntax for rendering a favicon for the page",
+            "answer": "<link rel='shortcut icon' href='image-url' type='image/x-icon'>",
+            "options": [
+                "<link rel='shortcut icon' href='image-url' type='image/x-icon'>",
+                "<favicon href='image-url' alt='Favicon.css'></favicon>",
+                "<fav href='image-url' File-Encoded='jpg/png'><fav>",
+                "<fav href='image-url' File-Encoded='jpg/png'></fav>"
+            ]
+        },
+        {
+            "id": "web15",
+            "source": "code CBT",
+            "question": "The css property, 'box-sizing' set to 'border-box' denotes that",
+            "answer": "All margins and paddings will be deducted and not affect the elements width or height",
+            "options": [
+                "The Element's width will be equal to the body's width",
+                "All margins and paddings will be deducted and not affect the elements width or height",
+                "The DOM will no longer be functional because the page has been boxed as a border (DOM.boxing)",
+                "The Elements height will be a composition of its children"
+            ]
+        },
+        {
+            "id": "web16",
+            "source": "code CBT",
+            "question": "The relationship Elements on a web page can be likened to that of ______",
+            "answer": "A parent-child relationship",
+            "options": [
+                "A parent-child relationship",
+                "A Tree-node and root-systems",
+                "Objects in Object Oriented Programming",
+                "Sibblings only"
+            ]
+        },
+        {
+            "id": "web17",
+            "source": "code CBT",
+            "question": "The only Element in a html file without a parent is (element not tag)",
+            "answer": "<html></html>",
+            "options": [
+                "<title></title>",
+                "<!DOCTYPE html>",
+                "<html></html>",
+                "<body></body>"
+            ]
+        },
+        {
+            "id": "web17",
+            "source": "code CBT",
+            "question": "The function of '<!DOCTYPE html>' is to ______",
+            "answer": "Tell the browser that the document is a html 5 document",
+            "options": [
+                "Tell the browset that the document is a html document",
+                "Check if the browser supports new tags",
+                "Create a secure connectipn between the browser(client) and the host(server)",
+                "Tell the browser that the document is a html 5 document"
+            ]
         }
+        
 
     ]
 }
