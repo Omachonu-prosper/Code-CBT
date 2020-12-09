@@ -5,7 +5,7 @@ The one stop code questions api.
 Code CBT is a frontend api where you can get code related questions you can use for practise, job interview tests (can be used by employers or potential employees) or by code instructors to teach their students how to make api calls or to test their knowledge on what they have learnt.
 
 ## Getting started
-You can use the Code CBT API either by making Http requests or downloading the json files and hosting it yourself.
+You can use the Code CBT API by making Http requests to the json files on our servers.
 
 ## Making Http GET requests
 Using Code CBT through http requests requires you to make HTTP GET requests to our hosted server.
@@ -59,9 +59,6 @@ Let me know what you think about this software i'm open minded to any suggestion
 > :hash: Twitter: [@OmachonuProsper](https://twitter.com/OmachonuProsper)
 
 ### Adding your new question 
-> locally 
-If you are downloading the json files you are free to add, update or delete any question. You have the liberty to set the questions as you like but you must make reference to Code CBT.
-
 >On our servers
 You can make a pull request with a commit message stating the file you editted and the question id added on to from the last id in the right structure. For example if the last id in the js.json file was js43 then if i am to add a question the new questions id should be js44.
 
