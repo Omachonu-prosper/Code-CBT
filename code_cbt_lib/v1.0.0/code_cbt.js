@@ -3,7 +3,7 @@ class CodeCBT {
     // get all data 
     // returns the full file content 
     static getData(category, file) {
-        return fetch(`/api/v1.0.0/db/${category}/${file}`)
+        return fetch(`https://codecbt.netlify.app/api/v1.0.0/db/${category}/${file}`)
             .then(res => res.json())
             .catch(err => console.error(err) );
     }

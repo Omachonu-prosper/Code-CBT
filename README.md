@@ -14,12 +14,12 @@ Using Code CBT through http requests requires you to make HTTP GET requests to o
 
 > Request template
 ```
-    http://127.0.0.1:5500/api/-version-/db/-category-/-category-initials-.json
+    https://codecbt.netlify.app//api/-version-/db/-category-/-category-initials-.json
 ```
 
 > Request
 ```
-    http://127.0.0.1:5500/api/v1.0.0/db/javascript/js.json
+    https://codecbt.netlify.app//api/v1.0.0/db/javascript/js.json
 ```
 
 > Response
