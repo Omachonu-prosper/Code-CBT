@@ -173,18 +173,6 @@
         {
             "id": "web14",
             "source": "code CBT",
-            "question": "which of the following is the correct syntax for rendering a favicon for the page",
-            "answer": "<link rel='shortcut icon' href='image-url' type='image/x-icon'>",
-            "options": [
-                "<link rel='shortcut icon' href='image-url' type='image/x-icon'>",
-                "<favicon href='image-url' alt='Favicon.css'></favicon>",
-                "<fav href='image-url' File-Encoded='jpg/png'><fav>",
-                "<fav href='image-url' File-Encoded='jpg/png'></fav>"
-            ]
-        },
-        {
-            "id": "web15",
-            "source": "code CBT",
             "question": "The css property, 'box-sizing' set to 'border-box' denotes that",
             "answer": "All margins and paddings will be deducted and not affect the elements width or height",
             "options": [
@@ -195,7 +183,7 @@
             ]
         },
         {
-            "id": "web16",
+            "id": "web15",
             "source": "code CBT",
             "question": "The relationship Elements on a web page can be likened to that of ______",
             "answer": "A parent-child relationship",
@@ -207,19 +195,7 @@
             ]
         },
         {
-            "id": "web17",
-            "source": "code CBT",
-            "question": "The only Element in a html file without a parent is (element not tag)",
-            "answer": "<html></html>",
-            "options": [
-                "<title></title>",
-                "<!DOCTYPE html>",
-                "<html></html>",
-                "<body></body>"
-            ]
-        },
-        {
-            "id": "web17",
+            "id": "web16",
             "source": "code CBT",
             "question": "The function of '<!DOCTYPE html>' is to ______",
             "answer": "Tell the browser that the document is a html 5 document",
